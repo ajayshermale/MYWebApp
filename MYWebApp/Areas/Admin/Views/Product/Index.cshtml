@@ -1,0 +1,111 @@
+﻿@model WebApp.Models.ViewModel.ProductVM
+@{
+    ViewData["Title"] = "Product";
+}
+@*@{
+    if (TempData["Success"] != null)
+    {
+        <h2>@TempData["Success"];</h2>
+    }
+
+}
+*@
+<div class="container p-4">
+    <div class="row p-3">
+        <div class="col-6">
+            <h2 class="text-primary">Product<h2>
+        </div>
+        <div class="col-6 text-end">
+            <a class=" btn btn-primary" asp-action="CreateUpdate" asp-controller="Product"><i class="bi bi-plus-circle"></i>&nbsp; Create New Product</a>
+        </div>
+    </div>
+
+</div>
+
+<!--<table class="table tabletable-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Product Name
+            </th>
+            <th>
+                Product Description
+            </th>
+            <th>
+                Product Price
+            </th>
+            <th>
+                Product ImaheURL
+            </th>
+            <th>
+                Category
+            </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+      @*  @foreach (var item in Model.products)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    @item.Price
+                </td>
+                <td>
+                    @item.ImageURL
+                </td>
+                <td>
+                    @item.CategoryId
+                </td>
+
+                <td role="group">
+                    <a asp-action="CreateUpdate" asp-controller="Product" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                    <a asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
+
+                </td>
+            </tr>
+        }*@
+
+    </tbody>
+
+</table>>-->
+
+<table id="myTable" class="table tabletable-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Product Name
+            </th>
+            <th>
+                Product Description
+            </th>
+            <th>
+                Product Price
+            </th>
+            <th>
+                Product ImaheURL
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Action
+            </th>
+
+        </tr>
+
+    </thead>
+  
+    </table>
+@section scripts{
+   <script src="~/js/product.js"></script>
+}

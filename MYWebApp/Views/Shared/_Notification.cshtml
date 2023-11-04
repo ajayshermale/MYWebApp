@@ -1,0 +1,19 @@
+﻿
+    @if (TempData["Success"] != null)
+    {         
+        <script>        
+        toastr.success('@TempData["Success"]');
+        </script>
+        //<h2>@TempData["Success"];</h2>
+
+    }
+
+    @if (TempData["error"] != null)
+    {     
+        <script>
+            toastr.error('@TempData["error"]');
+        </script>
+        //<h2>@TempData["Success"];</h2>
+
+    }
+
